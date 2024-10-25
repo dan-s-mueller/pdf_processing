@@ -1,42 +1,62 @@
 import os
-# from tqdm.notebook import tqdm
+import sys
+import tempfile
+from google.cloud import storage
 
-# Re-OCR AMS docs
-directory=os.path.join('..','data','AMS')
-documents = ['AMS_1980.pdf', 
-             'AMS_1981.pdf',
-             'AMS_1982.pdf',
-             'AMS_1983.pdf',
-             'AMS_1984.pdf',
-             'AMS_1985.pdf',
-             'AMS_1986.pdf',
-             'AMS_1987.pdf',
-             'AMS_1988.pdf',
-             'AMS_1990.pdf',
-             'AMS_1991.pdf',
-             'AMS_1992.pdf',
-             'AMS_1993.pdf',
-             'AMS_1994.pdf',
-             'AMS_1995.pdf',
-             'AMS_1996.pdf',
-             'AMS_1997.pdf',
-             'AMS_1998.pdf',
-             'AMS_1999.pdf']
+def process_pdfs(bucket_name, specific_files=None):
+    # Initialize Google Cloud Storage client
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(bucket_name)
 
-# Re-OCR ESMAT docs from 1999-2003, which are probably pretty outdated OCRs.
-directory=os.path.join('..','data','AMS','reocr')
-documents = [file for file in os.listdir(directory) if file.endswith('.pdf') and any(year in file for year in ['1980', '1981', '1982'])]
+    # Determine which files to process
+    if specific_files:
+        blobs = [bucket.blob(file) for file in specific_files if file.endswith('.pdf')]
+    else:
+        blobs = list(bucket.list_blobs(prefix='', delimiter='/'))
+        blobs = [blob for blob in blobs if blob.name.endswith('.pdf')]
 
-for doc in tqdm(documents,desc='Document Processing'):
-    print(f"Processing {doc}")
-    try:
-        for i in tqdm(range(2), desc=f"Processing {doc}", leave=False):
-            if i == 0:
-                os.system(f'ocrmypdf --tesseract-timeout 0 --continue-on-soft-render-error --force-ocr {directory}/{doc} {directory}/{doc}_stripped.pdf')   # Stripped pdf
-            # elif i == 1:    
-            #     os.system(f'ocrmypdf --sidecar {directory}/{doc}_strip_reocr.txt --continue-on-soft-render-error {directory}/{doc}_stripped.pdf {directory}/{doc}_strip_reocr.pdf') # Apply OCR, output file
-            elif i == 1:
-                os.system(f'ocrmypdf --sidecar {directory}/{doc}_reocr.txt --continue-on-soft-render-error --redo-ocr {directory}/{doc} {directory}/{doc}_reocr.pdf') # Apply OCR, output file
-    except:
-        print(f'Error processing {doc}')
-        pass
+    # Create a temporary directory to store files during processing
+    with tempfile.TemporaryDirectory() as temp_dir:
+        for blob in blobs:
+            doc_name = blob.name
+            print(f"Processing {doc_name}")
+            try:
+                # Download the PDF file from GCS
+                local_file = os.path.join(temp_dir, doc_name)
+                blob.download_to_filename(local_file)
+
+                # Generate a stripped PDF (remove images, keep text)
+                stripped_file = os.path.join(temp_dir, f"{doc_name}_stripped.pdf")
+                os.system(f'ocrmypdf --tesseract-timeout 0 --continue-on-soft-render-error --force-ocr "{local_file}" "{stripped_file}"')
+                
+                # Apply OCR to the original PDF, generating a new PDF and text file
+                reocr_file = os.path.join(temp_dir, f"{doc_name}_reocr.pdf")
+                reocr_txt = os.path.join(temp_dir, f"{doc_name}_reocr.txt")
+                os.system(f'ocrmypdf --sidecar "{reocr_txt}" --continue-on-soft-render-error --redo-ocr "{local_file}" "{reocr_file}"')
+
+                # Upload processed files back to the original bucket
+                bucket.blob(f"{doc_name}_stripped.pdf").upload_from_filename(stripped_file)
+                bucket.blob(f"{doc_name}_reocr.pdf").upload_from_filename(reocr_file)
+                bucket.blob(f"{doc_name}_reocr.txt").upload_from_filename(reocr_txt)
+
+            except Exception as e:
+                print(f'Error processing {doc_name}: {str(e)}')
+
+if __name__ == "__main__":
+    # Check for correct usage
+    if len(sys.argv) < 2:
+        print("Usage: python process_pdfs.py <bucket_name> [file1.pdf file2.pdf ...]")
+        sys.exit(1)
+    
+    # Get bucket name from command line arguments
+    bucket_name = sys.argv[1]
+    
+    # Get specific files to process (if any)
+    specific_files = sys.argv[2:] if len(sys.argv) > 2 else None
+
+    # If no specific files are provided, set to None to process all files in the bucket
+    if not specific_files:
+        specific_files = None
+    
+    # Start processing PDFs
+    process_pdfs(bucket_name, specific_files)
