@@ -13,7 +13,13 @@ def process_pdfs(bucket_name, specific_files=None):
         blobs = [bucket.blob(file) for file in specific_files if file.endswith('.pdf')]
     else:
         blobs = list(bucket.list_blobs(prefix='', delimiter='/'))
-        blobs = [blob for blob in blobs if blob.name.endswith('.pdf')]
+        blobs = [blob for blob in blobs if blob.name.endswith('.pdf') and 
+                 not ('_stripped.pdf' in blob.name or '_reocr.pdf' in blob.name)]
+
+    # Print the list of files to be processed
+    print("Files to be processed:")
+    for blob in blobs:
+        print(f"- {blob.name}")
 
     # Create the /data directory if it doesn't exist
     data_dir = './data'
