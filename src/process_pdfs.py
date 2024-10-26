@@ -27,6 +27,7 @@ def process_pdfs(bucket_name, specific_files=None):
 
     for blob in blobs:
         doc_name = blob.name
+        doc_name_without_ext = doc_name[:-4]  # Remove the '.pdf' extension
         print(f"Processing {doc_name}")
         try:
             # Download the PDF file from GCS to the /src/data directory
@@ -47,8 +48,8 @@ def process_pdfs(bucket_name, specific_files=None):
             print(f"Generated stripped PDF: {stripped_file}")
 
             # Upload processed file back to the original bucket
-            bucket.blob(f"{doc_name}_stripped.pdf").upload_from_filename(stripped_file)
-            print(f"Uploaded {doc_name}_stripped.pdf to {bucket_name}")
+            bucket.blob(f"{doc_name_without_ext}_stripped.pdf").upload_from_filename(stripped_file)
+            print(f"Uploaded {doc_name_without_ext}_stripped.pdf to {bucket_name}")
 
             # Apply OCR to the original PDF, generating a new PDF and text file
             reocr_file = os.path.join(data_dir, f"{doc_name}_reocr.pdf")
@@ -68,9 +69,9 @@ def process_pdfs(bucket_name, specific_files=None):
             print(f"Generated OCR PDF: {reocr_file}")
 
             # Upload processed files back to the original bucket
-            bucket.blob(f"{doc_name}_reocr.pdf").upload_from_filename(reocr_file)
-            bucket.blob(f"{doc_name}_reocr.txt").upload_from_filename(reocr_txt)
-            print(f"Uploaded {doc_name}_reocr.pdf and {doc_name}_reocr.txt files to {bucket_name}")
+            bucket.blob(f"{doc_name_without_ext}_reocr.pdf").upload_from_filename(reocr_file)
+            bucket.blob(f"{doc_name_without_ext}_reocr.txt").upload_from_filename(reocr_txt)
+            print(f"Uploaded {doc_name_without_ext}_reocr.pdf and {doc_name}_reocr.txt files to {bucket_name}")
 
         except Exception as e:
             print(f'Error processing {doc_name}: {str(e)}')
