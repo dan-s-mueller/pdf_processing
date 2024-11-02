@@ -1,6 +1,9 @@
 # Use an official Python runtime as a parent image
 FROM python:3.11.5-bookworm
 
+# Allow statements and log messages to immediately appear in the Knative logs
+ENV PYTHONUNBUFFERED True
+
 # Set the working directory in the container
 WORKDIR /app
 

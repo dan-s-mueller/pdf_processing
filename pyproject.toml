@@ -1,4 +1,4 @@
- [tool.poetry]
+[tool.poetry]
 name = "pdf-processing"
 version = "0.1.0"
 description = "Utilities for pdf processing"
@@ -6,9 +6,11 @@ authors = ["Dan Mueller <dsm@danmueller.pro>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
 google-cloud-storage = "^2.18.2"
 ocrmypdf = "^16.5.0"
+ipykernel = "^6.29.5"
+unstructured-ingest = {extras = ["pdf"], version = "^0.2.1"}
 
 
 [build-system]
