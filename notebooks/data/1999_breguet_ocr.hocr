@@ -1,0 +1,530 @@
+COMPACT, LIGHT WEIGHT MECHANISMS FOR HIGH PRECISION MICRO-MANIPULATORS
+
+Jean-Marc Breguet, Yves Bellouard, Simon Henein, Cédric Aymon, Stefano Bottinelli, Reymond Clavel
+
+Département de microtechnique, Institut de systémes robotiques (DMT-ISR)
+Swiss Federal Institute of Technology Lausanne (EPFL)
+CH-1015 Lausanne EPFL, Switzerland
+Telephone: +41 21 693 38 07/ Fax: +41 21 693 38 66
+E-mail: jean-mare.breguet@epfl.ch
+
+ABSTRACT
+
+This paper presents innovative concepts developed at
+the “Institut de s nes robotiques” for the realisation
+of high precision micro-manipulators.
+
+Our approach allows to design compact, light and
+reliable mechanisms. Piezoceramic micro-actuators,
+flexible bearings and end-effectors in shape memory
+alloys are descibed and illustrated with several
+prototypes.
+
+The proposed concepts satify remarkably well the in-
+flight space experiments requirements and are believed
+to be excellent candidates to be used in embarked
+“Microlabs”’.
+
+1, INTRODUCTION
+
+Since the beginning of the nineties, the industry of
+Microsystems asks for a miniaturization of the
+production tools (i.e. machines and production
+facilities), the goal being to reduce weight, volume and
+power consumption and finally, to reduce the
+production costs. At the same time, immunity of the
+systems against environmental perturbations, such as
+vibrations or temperature fluctuations is improved. In
+the academic community, this concept is generally
+called miniature-factory or “Microfactory”. It refers to a
+set of cooperating machines in a tabletop containment to
+produce, process and manipulate micro-devices [1].
+
+The Microfactory characteristics satisfy remarkably
+well the in-flight space experiment requirements and
+could soundly be used to realize embarked "Microlabs".
+This paper describes innovative approaches for the
+design of actuators, mechanical structures and end-
+effectors, all dedicated to Microfactories or Microlabs.
+The proposed solutions are simple and highly reliable.
+Our approach is illustrated in this paper with several
+examples.
+
+2. PIEZOCERAMIC MICRO-ACTUATORS
+
+In the frame of the Microlab concept, “stick and slip
+actuators” are characterized by their remarkable
+simplicity. Without any precision mechanical parts, nor
+delicate assembly processes, and using low cost
+material, we can design micro-manipulators with
+
+nanometer resolutions and large wokspaces (several
+cubic centimeters) [2].
+
+2.1 Operating principle
+
+An inertial mass (slider) is supported and guided by
+gs (figure 1). Two modes of operation are
+defined, viz. stepping- and scanning-modes.
+
+In the stepping-mode, each step consists of a slow
+deformation of the legs followed by an abrupt jump
+backward. During the slow deformation the ma:
+follows the legs because of friction (stick), whereas it
+cannot follow the sudden jump because of its inertia
+(slip).
+
+The stepping mode allows long displacements at a
+relatively high speed (typically 5 mm/s). The resolution
+is limited to a step or so (200 nm).
+
+Once the position is within less than a step distance of
+the target, the legs are deformed slowly until the final
+position is reached. In this mode, called scanning-mode,
+the resolution is a fraction of a step (typically better than
+5 nm).
+
+leg voltage
+
+stick
+
+a wl a +
+stick A
+1 step /V/ /, -
+
+time
+Figure 1: Stick and Slip Actuator, operation principle
+
+2.2 Experimental results and performances
+
+A controller has been implemented and the
+performances of the 1-DOF actuator is shown on
+figure 2 [3].
+So
+
+slider's position [mm]
+
+40, ————
+time [s]
+
+Figure 2: Illustration of the remarkable dynamic
+
+properties of these actuators (from nanometers to
+
+millimeters). Actually, the accuracy of the system is
+
+limited to 5 nm by the resolution of the position sensor
+
+(interferometer).
+
+i) 20
+
+2.3 Prototypes
+
+Several micro-manipulators using Stick and Slip
+Actuators have been developed and tested at ISR. Some
+of them are integrated in micro-assembly or micro-
+telemanipulation systems.
+
+Simplicity, rigidity, high resolution and easiness of
+integration into a system are the main features we have
+considered during the development of our micro-
+manipulation systems.
+
+2.3.1 A six degrees-of-freedom platform
+
+Stick and Slip Actuators can easily be integrated into
+complex mechanical structures. Figure 3 shows a
+parallel kinematics actuated by three Stick and Slip
+Actuators, each of them having 2-DOF. The platform
+has thus 6-DOF (3 translations and 3 rotations).
+
+Figure 3: 6 degrees-of-freedom platform.
+
+Its workspace is evaluated at about 140 mm}, for an
+overall volume of the structure smaller than 4 cm’. The
+maximum payload is 0.1 N [4].
+
+Such platform could be used, for example, to position
+and orientate samples under a microscope.
+
+2.3.2 A three degrees-of-freedom mobile micro-robot
+An innovative concept, named “Monolithic
+Piezoceramics Flexible Structures”, has been invented
+at ISR allowing to design extremely simple mobile
+micro-robots [5].
+
+Figure 4 shows a picture and exploded view of a 3-DOF
+mobile micro-robot composed of only 6 simple
+mechanical parts.
+
+These micro-robots have a resolution of a few
+nanometers and a maximum speed as high as 3 mm/s.
+Their workspaces are limited only by the table on which
+they are moving (and the length of the wires). A
+
+pegs for assembly _
+
+permanent magnet allows them to work also upside
+=e |
+platform
+
+down. ’ i
+TD
+
+PZT plate
+
+spheres
+
+Figure 4: A 3 degrees-of-freedom mobile micro-robot.
+
+2.4 A few examples of application
+
+A similar micro-robot was used to carry a micro-
+electrode and make micro-EDM machining. A vertical
+axis was added to obtain the fourth degree-of-freedom
+required by this application. Die-sinking and milling
+experiments, without rotation of the electrode, were
+done on cover glass in automatic and manual modes.
+Typical milling speeds were 0.5 mm/s [6].
+
+Replacing the electrode by a micro-gripper, the robot
+was used in an experimental setup for micro-assembly
+(figure 5). The goal was to insert the rotor of an
+electrostatic motor into its stator. The clearance was 2
+um. The diameter of the rotor was 250 um for a
+thickness of 150 um. The micro-robot is placed under
+an optical microscope. A 3-D vision system provides a
+position feedback with submicron accuracy. The system
+successfully completed the insertion operation in
+automatic and manual modes [7].
+
+Figure 5: Micro-assembly system.
+
+Finally a micro-telemanipulation system for biological
+specimens was developed. The micro-manipulator can
+carry micro-tools such as micro-electrodes or micro-
+pipettes to operate with a nanometr accuracy on
+biological tissues or cells [8].
+3. MONOLITHIC FLEXIBLE MECHANICAL
+STRUCTURES
+
+In many cases an inappropriate mechanical structure for
+a manipulator can be an insurmountable limiting factor
+to its precision. For example backlash or friction can
+hardly be overcome by sensors or controllers. An
+efficient approach to this problem is to use a new
+concept of structures specially dedicated to high
+precision micro-manipulators. It consists in replacing
+the traditional rolling or plain bearings by flexible
+bearings. We present here the advantages of flexures
+compared to traditional bearings then we show some
+examples of original flexures and a 3 degrees-of-
+freedom high precision micro-manipulator.
+
+Like plain or rolling bearings, flexures are joints
+
+connecting solid members and permitting relative
+
+motion in some directions while constraining motion in
+others. But whereas the two former types of bearings
+rely upon the friction or rolling of solid bodies on each
+other, flexures use the elastic properties of matter. This
+brings numerous advantages for high precision
+
+mechanisms [9]:
+
+- Absence of friction : plain or rolling contact between
+solids inevitably generates friction which alters the
+joint's functioning. Friction dissipates energy,
+provoking mechanical hysteresis. At low speed it
+causes halting motion due to the "stick & slip"
+phenomenon which limits the resolution of the
+movements. Finally friction is at the origin of wear.
+Flexure are free from all solid friction. Solely remains
+the internal friction of matter which is practically
+negligible.
+
+- Absence of wear : wear reduces the precision of plain
+and rolling bearings because it alters their geometry
+and increases their mechanical play. Moreover, it is
+the principal factor limiting their life-time. Flexures do
+not suffer from these drawbacks and have their life-
+time limited only by the eventual fatigue of the
+material. Good design maintaining the stresses below
+the fatigue limit allow to guarantee almost infinite life-
+times.
+
+- Absence of mechanical play : to reach high precision,
+plain and rolling bearings often require complicated
+play compensation. Per definition, flexures have no
+play.
+
+- High rigidities : the more rigid the mechanical
+structures of machines, the more precise they are
+statically (when external loads are applied) and
+dynamically (when vibrations occur). The rigidity of
+rolling bearings depend on the pressure of rolling
+elements on top of a rolling surface. With small
+bearings, the small radiuses of the rolling elements
+limits the rigidity. Well designed flexures can be much
+more rigid than rolling bearings.
+
+- Compact and monolithic structures : plain and rolling
+bearings are made of many mechanical parts which are
+assembled. This assembly increases their bulkiness
+
+and reduces their construction precision. Wire-
+electrodischarge machining allows to manufacture
+very complex flexible structures monolithically, hence
+very compact and precise.
+
+- Immunity to contamination : the wear and required
+lubrication of plain and rolling bearings frees particles
+of matter which can pollute the air of clean rooms. On
+the contrary, when used in dirty environments, dust
+can easily perturb or even block these bearings.
+Flexures are perfectly clean and are not affected by
+dirt.
+
+The main limitation of flexures is their range of motion
+which must be restricted to avoid intolerable stresses
+inside the material. This calls for flexible parts with ever
+thinner cross-sections. Wire-electrodischarge machining
+allows to manufactures flexible parts having thicknesses
+of a few tens of microns with relatively long motion
+ranges. Much work is done to establish efficient models
+to predict the behavior of such thin flexures [10].
+
+3.1 Examples of flexures
+
+Figure 6: Examples of monolithic flexures. From left to
+right : cross spring pivot (tempered steel); linear stage
+with 4 necked down flexures 25um in thickness and a
+motion range of 0.5mm (tempered steel), X Y OZ stage
+(Perunal Aluminum alloy), linear stage. The match is
+50mm long.
+
+Figure 7: Compact monolithic XY stage with integrated
+flexible bellow (tempered steel). The flexible parts are
+25m in thickness, the motion range is 0.5mm. The part
+is 30mm in height.
+Figure 8: Compact monolithic serial XY stage. Motion
+range : +Imm; thickness of flexible parts: 60m;
+material: titanium alloy TiAl6V4. The match is 50mm
+long.
+
+Figure 9: Orion X-Y-Z robot. This parallel robot is
+composed of three monolithic arms (tempered steel)
+connected to the moving platform on top. Each arm is
+actuated by a screw-nut system and a DC motor with
+encoder. The resolution of each axis is better than
+0.8um. The linear motion range of the robot is +5mm,
+the angular motion range is +7°. (The EPFL sticker is
+60mm long).
+
+4, SHAPE MEMORY ALLOYS END-EFFECTORS
+
+Shape Memory alloys (SMA) provide a simple,
+compact, lightweight, lubricant-less and shock-less
+solution in the field of actuator for space engineering.
+They have been successfully introduced in several space
+applications like for deployment structures (Rapana
+truss on the orbital station MIR) [11], releasing
+mechanisms (solar panels on Clementine spacecraft)
+[12] as well as small actuators (Material Adhesion
+Experiment on Mars pathfinder) [13]. Moreover, among
+all actuators, Shape Memory Alloys have the best
+force/weight ratio in the micron scale world. They can
+deliver a very large force in a narrow space, which
+makes these alloys attractive for micro-engineering
+applications. Until today, most of SMA micro-systems
+use only the SMA as the actuator combined with others
+mechanical parts like pullback springs, guiding systems,
+etc. All these systems are not suitable for very small
+applications (dimensions less than a few millimeters)
+
+because of the assembly of microelements and in some
+cases, the friction between mechanical elements.
+
+A new concept of monolithic SMA mechanism has been
+developed in our laboratory. This concept consists i
+considering the SMA not only as a part of a mechanism
+but as a mechanism in itself [14]. In the case of a
+microgripper, the actuator, the jaws and the pullback
+spring are all included within the same piece of
+material. This allows us to create versatile, simple, easy-
+to-assemble, sub-millimeter and powerful microgripper.
+
+A first design was developed in the framework of an
+industrial project where the goal was to develop and
+automatize the assembly of micro-endoscopes. The
+challenge was to carefully manipulate small cylindrical
+micro-lenses with diameters of 0.25 to 0.35 millimeters.
+
+A first prototype of microgripper consists of a small
+piece of one-square millimeter SMA material (NiTiCu).
+The gripper has one moving arm, which closes on
+heating and opens on cooling. The reversible motion is
+done by using the so-called, Two-Way-Shape-Memory-
+Effect (TWSME). This effect appears when the material
+is submitted to a training process, which consists in a
+constrained thermal cycling of the material.
+
+Figure 10 : The Two-Way-Shape Memory micro-gripper
+1.Grin lens (on a glass support); 2. Micro-gripper ;
+3. A match.
+
+The main characteristics are:
+
+- Maximum grasping force: 16 mN
+
+- Weigth: < 1 mg
+
+- Size: around 1 mm
+
+- Thickness: 0.17 mm
+
+- Material: NiTiCu
+
+- Machined by laser
+
+- Power consumption: around 0.4 W*
+- Activation temperature: 60 to 80°C*
+* Depends on the SMA material used.
+
+The gripper has been tested for 200'000 cycles of lenses
+grasping (the fatigue characteristic shows saturation
+after 200'000 cycles).
+The main advantage of this device is the simplicity of
+fabrication and actuation. It can be used in special
+environments like clean-rooms, vacuum or zero gravity.
+
+5. CONCLUSION
+
+The increasing number of experiments run in micro-
+gravity will necessary lead to the development of a new
+kind of laboratory equipment dedicated to space.
+
+The ISR does not have any experience in this field yet,
+
+nevertehless, the microfactory concepts presented in this
+
+paper have many similarities with the space
+
+requirements :
+
+- small weigh and dimensions;
+
+- low energy consumption;
+
+- work in vacuum or controlled atmospheres;
+
+- handling strategies for micro-parts adapted to micro-
+gravity;
+
+- immunity to chocks and vibrations.
+
+Hence we believe that these new design approaches can
+be of great use for the realization of Microlabs to be
+embarked in space.
+
+6. AKNOWLEDGMENT
+
+The authors are grateful to Dr. T. Sidler for the laser cut
+of the prototypes and to J-J. Crausaz and G. Perrenoud
+for the realization of the prototypes.
+
+REFERENCES
+
+1] R. Hollis J. Gowdy, “Miniature Factories for
+Precision Assembly”, International Workshop on
+Microfactories, Tsukuba, Japan, pp. 9-14, 7-9
+November, 1998.
+
+2] J.-M. Breguet P. Renaud, “A 4-DEGREES-OF-
+FREEDOM MICROROBOT WITH
+NANOMETER RESOLUTION” Robotica, vol. 14,
+pp. 199-203, 1996.
+
+3] J.-M. Breguet R. Clavel, “NEW DESIGNS FOR
+LONG RANGE, HIGH RESOLUTION, MULTI-
+DEGREES-OF-FREEDOM PIEZOELECTRIC
+ACTUATORS”, ACTUATOR'98, Bremen,
+Germany, pp. 198-201, June 17-19, 1998.
+
+4] E. Pernette, R. Clavel, P. Minotti, P. L. Moal, A.
+Ferreira, W. Leflein, H. Porte R. Ferriére,
+“Micromanipulateur pour I'alignement optique”,
+6éme Congrés Européen de Choronométrie, Bienne,
+Suisse, pp. 201-204, 17-18 octobre, 1996.
+
+5] J.-M. Breguet, S. Henein, R. Mericio R. Calvel,
+“Monolithic Piezoceramics Flexible Structures for
+Micromanipulation”, 9-IPES/UME 4,
+Braunschweig, vol. 2, pp. 397-400, 26-30 May,
+1997.
+
+6] H. Langen, J.-M. Breguet, H. Bleuler, P. Renaud T.
+Masuzawa, “Micro Electrochemical Dischar
+
+17]
+
+8]
+
+9)
+
+10
+
+11
+
+12
+
+13
+14
+
+Machining of Glass” Jnternational Journal of
+Electrical Machining, vol. 3, pp. 65-69, 1998.
+
+A. Sulzmann, J.-M. Breguet J. Jacot,
+“MICROVISION SYSTEM (MVS): A 3D
+COMPUTER GRAPHIC-BASED MICROROBT
+TELEMANIPULATION AND_ POSITION
+FEEDBACK BY VISION” SPIE’s Photonics East
+Proceedingvol. 2593, pp. 38-49, 23-26 October,
+1995.
+
+J.-M. Breguet R. Clavel, “Stick and Slip Actuators:
+design,control, performances and applications”,
+International Symposium on Micromechatronics
+and Human Science, Nagoya, Japan, pp. 89-95,
+November 25-28, 1998.
+
+S. T. Smith D. G. Chetwynd .Foundations of
+ultraprecision mechanism design. Developments in
+nanotechnology, vol. 2: University of Warwick,
+UK, 1992.
+
+S. Henein, S. Bottinelli R. Clavel, “Parallel spring
+stages with flexures of micromectric cross.
+sections.”, Proc. of SPIE Int. Symposium on
+Intelligent Systems & Advanced Manufacturing,
+Pittsburgh, pp. 209-220, October, 1997.
+
+A.I. Razov, A.G. Cherniavsky, V. Yu. Korneev, Yu.
+D. Kravchenko, "Shape Memory Actuators for
+Space Applications", Int. Conf. on Shape Memory
+and Superelastic Technologies, 2-6 March 1997,
+Pacific Grove, USA, pp. 311-316.
+
+A.D. Johnson,"State-of-the-art of Shape Memory
+Actuators", Int. Conf. on New Actuators, Actuators,
+17-19 June 1998, Bremen, Germany, pp.460-463.
+see web site, www.robotstore.com
+
+'Y.Bellouard, R. Clavel, R. Gotthardt, J.-E. Bidaux,
+T. Sidler, "A new concept of Monolithic Shape
+Memory Alloy micro-devices used in micro-
+robotics", Int. Conf. on New Actuators, Actuators,
+17-19 June 1998, Bremen, Germany, P88.
+

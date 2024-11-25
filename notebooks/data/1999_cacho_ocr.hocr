@@ -1,0 +1,481 @@
+A VERY BROAD BAND 3 AXIS SEISMOMETER TO STUDY INTERNAL STRUCTURE
+
+OF MARS
+
+S. Cacho!, P. Lognonné’, JF. Karczewski’, G. Pont', G. Coste’.
+
+1: IPGP, Département des Etudes Spatiales, 4 av. de Neptune, 94107 St Maur, France, E-mail :
+cacho@ ipgp.jussieu,fr, Tél: + 33 1 45 11 41 26.
+
+2: IPGP, Département des Etudes Spatiales, 4 av. de Neptune, 94107 St Maur, France, E-mail:
+lognonné@ ipgp.jussieu.fr, Tél: + 33 145 11 42 54,
+
+3: IPGP, Département de Sismologie, 4 av. de Neptune, 94107 St Maur, France, E-mail: jfk@ geoscop fr,
+Tél: + 33 145 11 41 46.
+
+4: CNES, Département Mécanismes, 18 av. Edouard Belin, 31401 Toulouse Cedex 4, France, E-mail:
+Gabriel. Pont@cnes,fr, Tél: + 33 5.61 28 25 31.
+
+5: SODERN, 20 av. Descartes, 94451 Limeil Brevannes Cedex, France, — E-mail:
+Georges_Coste@ sodern.fr, Tél: + 33 1 45 95 70 73.
+
+ABSTRACT
+
+Very Broad Band seismometers are the best instruments
+for studying internal structure of telluric planets [1].
+Development of such instrument dedicated to Mars
+observation take up a real instrumental challenge. In
+fact they must be able to :
+
+- detect ground displacement of a few 10 pm ina
+bandwidth from DC to 20 Hz in the 3
+directions,
+
+- have a very low sensitivity to temperature,
+pressure, gravity...
+
+- be installed automatically on any ground,
+
+- have a low mass ( < 2 kg with the installing
+devices) a low volume and low power
+consumption (< 1 W),
+
+- resist to landing shock, usually close to 200 g.
+
+Such instrument [2] have been developed by IPGP and
+INSU, with the industrial collaboration of SODERN,
+under an R&D contract from CNES. It will be part of
+each lander of the Netlander mission, which plan to
+deploy 4 small stations on Martian ground in 2006, to
+perform a geophysical study of this planet.
+
+1. INTRODUCTION
+
+A seismometer is an instrument which measures the
+
+local acceleration variation of the ground where it is
+installed. Such data contain signals related to the
+seismic and tidal activity of the planet. Analysis of these
+data has permitted, this century, a better understanding
+of the mechanisms involved in the seismic events. At
+the beginning of the 80's, progresses in seismic
+instrumentation have permitted the realization of a new
+kind of seismometer : the Very Broad Band instruments.
+These sensors like the STS-1 and STS-2, by Streckeisen
+[3], and the CMG-3, by Guralp [4], are mainly
+characterized by a high sensitivity (better than 10”
+m.s ? VHz) and two different outputs :
+
+- a velocity one, dedicated to the record of
+seismic signal issued typically from
+earthquakes (bandwidth : 360 s or 120 s up to
+20 Hz),
+
+- a position or tidal one, dedicated to the record
+of tidal signals, liquid and solid (bandwidth :
+DC to 360 s or 120s).
+
+These seismometers, oftenly used in Very Broad Band
+seismic network like IRIS for the USA or GEOSCOPE
+for France, still remain as references in seismic
+instrumentation. High quality of data provided by such
+sensors has permitted to establish the first 3D models of
+our planet, giving us the details of its internal structure.
+It is so theoretically possible to use these types of
+sensors to perform the same analysis for a telluric planet
+of our solar system.
+Mars is the best candidate for such analysis due
+to the many similitudes existing between this planet and
+the Earth, and in consequence due to the many missions
+programmed toward this destination. Our knowledge
+about this planet will permit a better understanding of
+origin and future of the solar system telluric planets.
+The problem of using VBB terrestrial sensors is :
+
+- they are too heavy (between 25 and 60 kg),
+
+- they are too much power consuming (between
+5 and 10 W),
+
+- they are very sensitive to pressure and
+temperature,
+
+- they are not very robust,
+
+- they need a human presence to be installed...
+
+In that respect, they have no capability to be used in
+spatial application. Moreover, Martian seismic activity
+is expected to be 2 or 3 order of magnitude lower than
+the Earth one, so their sensitivity for such measurement
+is problematic.
+
+The challenge we are facing is then : doing better with
+
+low mass and volume.
+
+2. DESCRIPTION OF THE SENSOR :
+
+A seismometer is usually composed of two
+subassemblies : a mechanical one and the electronics.
+
+2.1 : The mechanical subassembly :
+
+The mechanical part consists in fact in a pendulum
+realized using a spring supporting a mobile mass (Fig.
+1). Its function is to convert the acceleration applied on
+it, into a displacement of its mass.
+
+Figure 1 : Principe of a vertical seismometer.
+
+Mathematics equation describing the behavior of such
+pendulum shows that, in the useful bandwidth : for
+frequency lower than the resonant frequency, the
+sensitivity (Eq. 1) is proportional to the mass (m) of the
+mobile part and to the inverse of the spring stiffness (k).
+
+m
+f<t0 ~ 7
+k
+
+Ss Eq. |
+
+For terrestrial instruments the best way to reach a high
+mechanical sensitivity (about 10? s?) is to use a
+relatively heavy mass, which imply to use spring with
+an important size. In fact, springs used are subjected to
+high deformation loading, which requires important
+volume. That explains the consequent volume and mass
+necessary for these sensors.
+
+The concept used in our sensor can be called
+‘inverted tilted pendulum’ (Fig. 2).
+
+Figure 2 : Principe of our ‘inverted tilted pendulum’.
+
+Such disposition permits a higher sensitivity than usual
+systems for the same mass and volume. The sensitivity
+of such device becomes, after simplification, for
+frequencies lower than the resonant frequency :
+
+Eq. 2
+
+In our inverted tilted concept, described now in a
+cylindrical reference, (/) is the moment of inertia, (kg) is
+the rotational stiffness of the spring, (M') is the moment
+of equilibrium and (@) is the tilt of the pendulum.
+Behavior of this pendulum is very interesting, because
+we can show than, theoretically, it is possible to have an
+infinite sensitivity ! In fact the limitation comes from
+the aptitude to adjust the equilibrium of the pendulum
+when its frequency is getting close to zero.
+
+On our instrument, the spring used is a leaf
+spring (thickness close to 0.1 mm) permitting to reach a
+low stiffness in a low volume.
+
+The rotation of the pendulum is allowed in
+point O by a leaf-cross pivot. This device is constituted
+of alloy leafs cross-arranged between 2 rigid parts.
+Optimization of this system permit to use it as a pivot :
+fixing one of its rigid part, the other one can describe
+motion located on a circle arc, for small angles. Leaf
+elasticity is used : such system permits rotation with
+very low damping.
+
+On the first mock-up realized, the obtained
+sensitivity is close to 10° s* with a free frequency close
+to 1.5 Hz.
+
+Damping in this type of pendulum must be
+considered as an important point. Friction forces acting
+directly on the pendulum generate damping.
+Unfortunately these forces produce heat which induces
+Brownian noise in the structure around its equilibrium
+position.
+
+For a vertical seismometer we can show [5] that this
+noise is, expressed in spectral density of acceleration
+(m.s?.Hz"”), related to the mobile mass (mm), the free
+period (7) and the quality factor (Q) :
+
+This white noise (spectral density constant in
+
+the frequency bandwidth) provides the measurement
+limitation for the instrument. Our scientific objective for
+Mars is to reach a resolution better than 10!” m.s*.Hz
+1° which means a (m.Q.7) product greater than 10.
+For a terrestrial instrument this is generally obtained
+with a free period close to few seconds, a quality factor
+lower than 50, and a relatively high mass, between | kg
+and 500 kg.
+
+For our spatial instrument, the constraints are different :
+with a mass lower than 100 g, we can not reach easily
+high free periods and, the effort must be mainly done on
+the quality factor. The technology used for the structure
+is quite monolithic; technology of assembling is specific
+to assume low dynamic loss. The spring has been
+designed to reach a high (Q), looking to the loads
+applied and to specific heat treatments.
+
+The specific (Q) of the pendulum, reached for vacuum
+close to 10° mbar is higher than 1000. As the main
+structure has been designed to offer a minimum of
+viscous damping in the air, it is still possible to reach
+
+(Q) value higher than 100 for a vacuum near to 107
+mbar, not so difficult to obtain and maintain.
+
+Thermal properties of the pendulum are an
+important problem too, when you want to measure
+displacements close to a few tenth of picometers.
+Thermal drifts of the structure and thermal variation of
+mechanical properties produce variation on the
+equilibrium of the pendulum. Efforts have been made in
+the materials choice (titanium), in the main strucutre
+geometry (optimized using finite element software) and
+in the spring behavior. The thermo-mechanical
+properties of the spring have been adjusted by heat
+treatments to compensate the thermal drifts of the
+mobile aggregate. Such concept permits to reach a
+thermal sensitivity lower than 0.1 ym/K.
+
+Figure _3_: Main titanium part of the structure
+optimized to reach high mechanical properties, low
+viscous damping in the air and low thermal drifts.
+Dimensions : 7 cm x 3 cm, mass : 12 g.
+
+An equilibrium mechanism has been designed
+to balance the instrument. Sensors sensitivity used for
+the displacement measurement of the mobile mass
+requires to adjust the equilibrium of the pendulum with
+an accuracy of about 2 um. This requirement is not so
+trivial taking into account the fact that our instrument
+must be able to operate in many areas of Mars, at
+various altitudes (meaning various gravity’s). This
+function is realized using a micro-motor with a high
+ratio gear box coupled to a high precision screw on
+which is mounted a small mass screw nut with take up
+clearance. The reached positioning accuracy is around 1
+um.
+2.2 : The electronics :
+
+The displacement measurement will be done by two
+independent transducers :
+
+— an Oscillating Cavity Sensor (OCS), producing
+a digital tidal output (f < 10° Hz), with a
+dynamic range of 32 bits;
+
+— a Differential Capacity Sensor (DCS),
+providing an analogue long period seismic
+output (107-10 Hz), with a dynamic range of
+140 dB (with a spectral noise close to 1
+pm/Hz'” at 1 Hz).
+
+Feedback, necessary for a such high (Q) and sensitive
+instrument, is performed with both sensors, in order to
+reduce the mechanical re-centring and to provide the
+ideally continuous record necessary for tidal analysis.
+The OCS contributes to the digital part, to prevent long
+period drifts, and the DCS contributes to the analogue
+part, permitting an adjustment of the gain, of the
+instrument stability and of the resonance peak.
+
+ree
+ia
+
+Figure 4 : Instrument electrical block diagram.
+
+Pressure and temperature will be recorded with high
+resolution (ub and pK) in order to remove their
+influence on the seismic signal.
+
+2.3 : Mock-up realized :
+
+Three sensors, respecting the concept presented just
+above, were realized in 1997 with SODERN
+participation, to obtain a complete three-axis sensor.
+
+Displacement transducers
+Feedback coil / magnet
+
+Equilibrium
+mechanism
+ms
+
+Pivot inertial
+Jina band Fixed structure
+
+Figure 5: Mock-up of one axis sensor realized in
+1997.
+
+3. FIRST RESULTS :
+
+Tests have been made using the mock-up realized. We
+have used an STS-2 as a reference terrestrial
+seismometer.
+
+Results are very encouraging, because this first mock-up
+shows performances close to the STS-2, with a (m.Q.T)
+product close to 15 (STS-2 value is around 10).
+
+—__ VBB Sensor
+VBB Sensor built with STS2- signal
+
+Ground Accéleration (m/s?)
+
+1020" 1080" 1140 1200 «(12601320
+Time (s)
+
+Figure 6: Quake occurred in Afghanistan, recorded
+by an STS-2 and by the VBB mock-up, on May 30,
+1998. The signal was recorded in a seismic vault, in
+Saint-Maur, France. The quake has a magnitude of
+6.9. The STS-2 outputs were used to compute the
+oblique output compared to the mock-up signal. Note
+however that the breadboard was operating without
+feedback and a slightly different place than the STS-2,
+which may explain the small differences between the
+two signals.
+
+The actual performances make our instrument a
+terrestrial good one. Martian objective implies a
+minimum of one order of magnitude improvement. For
+the future we plan to reach such performances looking
+at a modified design, in which the pivot and the spring
+will be differently loaded to have a better sensitivity.
+
+4, NETLANDER INTEGRATION :
+
+The instrument, which will be integrated on the
+Netlander, will be composed of two-tilted axis
+providing, after recombination, data of one horizontal
+axis and one vertical axis. The limitation to two axis is
+related to the size of the lander. However the use of a
+micro-seismometer provided by JPL for the second
+"missing" horizontal component allows __ the
+measurement of all three axis signals.
+
+All these sensors plus the proximity electronic take
+place in an evacuated sphere of 13cm diameter (Fig. 7).
+
+Evacuated Sphere
+
+Proximity Electronic
+
+Figure 7 : Side view of the evacuated sphere with the 2
+VBB axis and the JPL micro-seismometer. Sphere
+diameter : 13 cm.
+
+This sphere can be levelled and is supported by 3 small
+passive feet in parallel with a larger active one.
+
+This aggregate will be locked on the lander by 4
+equatorial finger devices. All mechanisms will be
+designed to support a landing shock of 200 g - 20 ms.
+
+Figure 8 : Installation scenario of the seismometer.
+Objective is to uncouple the instrument from the
+lander and to assume a correct coupling with the
+ground.
+
+The seismometer deployment (Fig. 8) will start with the
+descent of the main foot. This device is a penetrating
+spike with an electro-mechanical hammer, with a design
+originating from the ROSETTA- MUPUS spike. This
+spike will anchor the sensor to the ground using the
+lander as a reaction mass. In order to minimise the
+power, this stage will be done over a few hours. If the
+ground is not encountered (e.g., if a hole is under the
+lander) or in case of problem, the seismometer will stay
+coupled to the lander.
+
+After the successful penetration of the foot, the
+seismometer will be unlocked and will fall along the
+main foot until the three small feet contact the ground.
+The sphere containing the sensor will then be levelled
+automatically (with an accuracy of a few fraction of
+degree), and locked.
+
+The system used for the seismometer deployment, even
+if not comparable with a full robotic or human
+installation, is therefore expected to provide a good
+installation. The influence of the lander on the
+seismometer will be minimised due to the enhanced de-
+coupling and coupling with ground at high frequency (f
+> 10 Hz). Finally, the lander will act as a thermal and
+wind shield for the instrument. This system will be
+designed to work for lander tilted up to about 30°.
+
+The mass of the sensor head is about 700 g.
+Total mass of the experiment, including locking,
+leveling, deployment devices and electronics is about
+1.9 kg.
+
+Total power consumption is about 500 mW.
+
+The first subassembly, the sensor, levelling
+system, installation system, locking mechanism and
+environmental sensors, as well as the overall instrument
+integration will be under the responsibility of the Institut
+de Physique du Globe de Paris, France (PI: P.
+Lognonné). The second part of the sensor will be the
+proximity electronics, a double-face electronic card for
+the CDMS I/F , A/D and feedback electronics, and the
+mass memory for the data logger. This part of the
+experiment is under the responsibility of Switzerland,
+Institiit of Geophysics (co-PI: D. Giardini). The last part
+of the seismometer package will be the micro-
+seismometers, either in the VBB sphere or on the spike.
+This part will be under the responsibility of the Jet
+Propulsion Laboratory, USA (co-PI, B. Banerdt).
+
+5. CONCLUSION :
+
+The NetLander mission is expected to provide the first
+network on Mars. The preliminary expected
+performances of the seismometer planned in the payload
+will allow [6] to monitor the Martian seismic activity,
+especially in the Tharsis area. Attempt to monitor the
+continuous excitation of normal as well as the gravity
+tides of the Sun and Phobos will also be performed.
+
+The NetLander mission, presently in phase A, is
+expected to start phase B in 2000, for a delivery of the
+instrument in late 2003-early 2004. After a launch in
+mid 2005, the seismic network will operate from early
+2006 to early 2008, during therefore one Martian year.
+With these new seismic data, much of the unknown
+internal structure of Mars will be discovered, a second
+telluric planet might therefore be characterized.
+
+6. REFERENCES :
+
+1] Lognonné, P.,
+Seismology, Survey Geophys.,
+
+Mosser, A. Planetary
+4, 239-302, 1994.
+
+[2] Cacho S., Etude et réalisation d’un prototype
+de sismométre trés large bande, 3 axes, qualifié
+spatial, Thése IPGP, 1996.
+
+[3] Wielandt, E. and G. Streckeisen, The leaf-
+Spring seismometer : design and performances, Bull.
+Seism. Soc. Am., 72, 2349-2367, 1982.
+
+[4] Guralp C., M.J. Usher, R.F. Burch, The design
+of miniature wideband seismometers, Geophys. J.R.
+astr. Soc, 55, 605-613, 1978.
+
+[5] Melton, B.S., The Sensitivity and Dynamic
+Range of Inertial Seismographs, Reviews of
+Geophysics and Space Physics, Vol 14, n° 1, 93-116,
+1976.
+
+[6] Lognonné P. et al., The Netlander Very
+Broad Band Seismometer, Submitted to Planetray
+Space Science, 1999.

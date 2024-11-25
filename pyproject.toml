@@ -11,6 +11,14 @@ google-cloud-storage = "^2.18.2"
 ocrmypdf = "^16.5.0"
 ipykernel = "^6.29.5"
 unstructured-ingest = {extras = ["pdf"], version = "^0.2.1"}
+selenium = "^4.26.1"
+google-cloud-documentai = "^2.29.2"
+pypdf = "^5.1.0"
+pypdf2 = "^3.0.1"
+pymupdf = "^1.24.14"
+tqdm = "^4.67.1"
+google-cloud-documentai-toolbox = "^0.14.0a0"
+ipywidgets = "^8.1.5"
 
 
 [build-system]

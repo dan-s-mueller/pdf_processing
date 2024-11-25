@@ -35,43 +35,28 @@ def process_pdfs(bucket_name, specific_files=None):
             blob.download_to_filename(local_file)
             print(f"Downloaded {doc_name} to {local_file}")
 
-            # Generate a stripped PDF (remove images, keep text)
-            stripped_file = os.path.join(data_dir, f"{doc_name}_stripped.pdf")
+            # Remove the '.pdf' extension from doc_name, process by reocr'ing it
+            doc_name_base = os.path.splitext(doc_name)[0]
+            reocr_file = os.path.join(data_dir, f"{doc_name_base}_reocr.pdf")
             ocrmypdf.ocr(
                 input_file=local_file,
-                output_file=stripped_file,
-                output_type='pdf', 
-                tesseract_timeout=0,                # Set to 0 for no timeout
-                force_ocr=True,                     # Force OCR even if the PDF has existing text
-                continue_on_soft_render_error=True  # Continue on soft render errors
-            )
-            print(f"Generated stripped PDF: {stripped_file}")
-
-            # Upload processed file back to the original bucket
-            bucket.blob(f"{doc_name_without_ext}_stripped.pdf").upload_from_filename(stripped_file)
-            print(f"Uploaded {doc_name_without_ext}_stripped.pdf to {bucket_name}")
-
-            # Apply OCR to the original PDF, generating a new PDF and text file
-            reocr_file = os.path.join(data_dir, f"{doc_name}_reocr.pdf")
-            reocr_txt = os.path.join(data_dir, f"{doc_name}_reocr.txt")
-            ocrmypdf.ocr(
-                input_file=stripped_file,
                 output_file=reocr_file,
                 output_type='pdf',   
-                sidecar=reocr_txt,                   # Output OCR text to a sidecar .txt file
                 continue_on_soft_render_error=True,  # Continue on soft render errors
                 language='eng',                      # Specify the language(s) you expect in your documents
+                force_ocr=True,
                 clean=True,
-                deskew=True,
+                # deskew=True,
                 skip_text=False,
-                optimize=1,  # Level 1 optimization (increase if needed, max is 3)
+                optimize=3,  # Maximum optimization for file size reduction
+                jpeg_quality=85,  # Adjust JPEG quality for a balance between size and quality
+                png_quality=85,  # Adjust PNG quality similarly
             )
             print(f"Generated OCR PDF: {reocr_file}")
 
             # Upload processed files back to the original bucket
-            bucket.blob(f"{doc_name_without_ext}_reocr.pdf").upload_from_filename(reocr_file)
-            bucket.blob(f"{doc_name_without_ext}_reocr.txt").upload_from_filename(reocr_txt)
-            print(f"Uploaded {doc_name_without_ext}_reocr.pdf and {doc_name}_reocr.txt files to {bucket_name}")
+            bucket.blob(f"{doc_name_base}_reocr.pdf").upload_from_filename(reocr_file)
+            print(f"Processed {doc_name_base}_reocr.pdf")
 
         except Exception as e:
             print(f'Error processing {doc_name}: {str(e)}')
