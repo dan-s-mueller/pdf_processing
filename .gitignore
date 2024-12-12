@@ -2,3 +2,5 @@
 ai-aerospace.json
 *.txt
 *.pdf
+results/
+.env
