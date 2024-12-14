@@ -4,3 +4,4 @@ ai-aerospace.json
 *.pdf
 results/
 .env
+*.pyc
